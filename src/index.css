@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/* Inter Fonts */
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('/fonts/Inter_Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter-Medium';
+    src: url('/fonts/Inter_Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter-Semibold';
+    src: url('/fonts/Inter_Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter-Bold';
+    src: url('/fonts/Inter_Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Warbler Italic */
+@font-face {
+    font-family: 'Warbler-Italic';
+    src: url('/fonts/Warbler_Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Inter Classes */
+.inter-regular {
+    font-family: 'Inter-Regular', sans-serif;
+}
+
+.inter-medium {
+    font-family: 'Inter-Medium', sans-serif;
+}
+
+.inter-semibold {
+    font-family: 'Inter-Semibold', sans-serif;
+}
+
+.inter-bold {
+    font-family: 'Inter-Bold', sans-serif;
+}
+
+/* Warbler Italic */
+.warbler-italic {
+    font-family: 'Warbler-Italic', cursive;
+}
