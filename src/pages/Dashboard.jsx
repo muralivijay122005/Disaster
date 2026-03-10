@@ -5,16 +5,24 @@ export default function Dashboard() {
     const { events, loading, error } = useEvents();
 
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen relative">
+            {/* Floating indigo circles – behind everything */}
+            <div className="moving-circles bg-black">
+                <div className="circle circle-1"></div>
+                <div className="circle circle-2"></div>
+            </div>
+
             {/* Header */}
-            <header className="bg-white shadow">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-                    <h1 className="text-3xl font-bold text-gray-900">
-                        PulseNet Dashboard
+            <header className="">
+                <div className="max-w-7xl mx-auto text-center px-4 py-48">
+                    <p className="text-white mb-6 bg-white/15 tracking-tight w-fit p-1 px-3 rounded-full mx-auto">Realtime Disaster Management</p>
+                    <h1 className="text-5xl inter-regular text-white tracking-tight">
+                        PulseNet — Real-Time <span className="warbler-italic">Intelligence</span>
                     </h1>
-                    <p className="mt-2 text-gray-600">
-                        Real-time disaster risk monitoring — Chennai • Delhi • Mumbai
+                    <p className="text-5xl text-white mt-4 tracking-tight">
+                        for <span className='text-indigo-200'> Disaster Response</span>
                     </p>
+
                 </div>
             </header>
 
@@ -33,7 +41,7 @@ export default function Dashboard() {
                         No risk events detected in the recent period
                     </div>
                 ) : (
-                    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                         {events.map(event => (
                             <EventCard key={event.id} event={event} />
                         ))}
