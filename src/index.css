@@ -58,3 +58,88 @@
 .warbler-italic {
     font-family: 'Warbler-Italic', cursive;
 }
+
+/* ──────────────────────────────────────────────── */
+/*     TWO MOVING TRANSPARENT INDIGO CIRCLES       */
+/* ──────────────────────────────────────────────── */
+
+@keyframes float1 {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    25% {
+        transform: translate(35vw, 25vh) scale(1.12);
+    }
+
+    50% {
+        transform: translate(-10vw, 55vh) scale(0.92);
+    }
+
+    75% {
+        transform: translate(-25vw, 15vh) scale(1.08);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+@keyframes float2 {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    20% {
+        transform: translate(-20vw, -30vh) scale(1.18);
+    }
+
+    45% {
+        transform: translate(40vw, 20vh) scale(0.88);
+    }
+
+    70% {
+        transform: translate(15vw, -40vh) scale(1.1);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1.3);
+    }
+}
+
+.moving-circles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%,
+            rgb(66, 69, 255),
+            rgb(116, 106, 255),
+            transparent 100%);
+    filter: blur(140px);
+    opacity: 1;
+    will-change: transform;
+}
+
+.circle-1 {
+    width: 50vmin;
+    height: 50vmin;
+    top: 10%;
+    left: 5%;
+    animation: float1 52s ease-in-out infinite;
+}
+
+.circle-2 {
+    width: 65vmin;
+    height: 65vmin;
+    bottom: 5%;
+    right: 8%;
+    animation: float2 68s ease-in-out infinite;
+    animation-delay: -18s;
+}
